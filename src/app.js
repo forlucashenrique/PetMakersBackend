@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const routers = require('./routers')
 const {sequelize} = require('./models/pet')
-const PORT = 3030;
+const PORT = process.env.PORT || 3030;
 const app = express();
 
 sequelize.sync();
